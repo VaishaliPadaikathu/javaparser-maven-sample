@@ -27,7 +27,12 @@
             <version>3.23.1</version>
         </dependency>
     </dependencies>
-          <distributionManagement>
+          
+    <!-- This blob of configuration tells Maven to make the jar executable. You can run it with:
+    mvn clean package
+    java -jar target/javaparser-maven-sample-1.0-SNAPSHOT-shaded.jar
+    -->
+         <distributionManagement>
     <snapshotRepository>
       <id>nexus-snapshots</id>
       <url>http://localhost:8081/repository/maven-snapshots/</url>
@@ -38,10 +43,6 @@
     </repository>
   </distributionManagement>
 
-    <!-- This blob of configuration tells Maven to make the jar executable. You can run it with:
-    mvn clean package
-    java -jar target/javaparser-maven-sample-1.0-SNAPSHOT-shaded.jar
-    -->
     <build>
         <plugins>
             <plugin>
